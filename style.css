@@ -21,10 +21,10 @@
     font-weight: var(--fw-light);
 }
 .fw-regular{
-    font-weight: var(--fw-light);
+    font-weight: var(--fw-regular);
 }
 .fw-bold{
-    font-weight: var(--fw-light);
+    font-weight: var(--fw-bold);
 }
 html{
     font-family: var(--font-family);
@@ -85,7 +85,7 @@ main{
     grid-column: 3 / span 1;
     grid-row: 2 / 4;
 }
-@media (max-width:1440px){
+@media (max-width:40rem){
     main{
         display:flex;
         flex-direction: column;
