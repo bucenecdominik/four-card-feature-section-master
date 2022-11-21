@@ -1,0 +1,97 @@
+:root{
+    --clr-primary-red: hsl(0, 78%, 62%);
+    --clr-primary-cyan: hsl(180, 62%, 55%);
+    --clr-primary-orange:hsl(34, 97%, 64%);
+    --clr-primary-blue:hsl(212, 86%, 64%);
+
+    --clr-neutral-dark-blue: hsl(234, 12%, 34%);
+    --clr-neutral-blue:hsl(229, 6%, 66%);
+    --clr-neutral-light-gray:hsl(0, 0%, 98%);
+
+    --font-size: 15px;
+
+    --font-family: 'Poppins', sans-serif;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-large: 600;
+    
+}
+.fw-light{
+    font-weight: var(--fw-light);
+}
+.fw-regular{
+    font-weight: var(--fw-light);
+}
+.fw-bold{
+    font-weight: var(--fw-light);
+}
+html{
+    font-family: var(--font-family);
+    
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:var(--clr-neutral-light-gray);
+}
+p{
+    color:var(--clr-neutral-blue);
+}
+h1, h3{
+    color:var(--clr-neutral-dark-blue);
+}
+footer{
+    display: flex;
+    justify-content:flex-end;
+}
+.start{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+main{
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    gap:2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.grid-one,.grid-two,.grid-three,.grid-four{
+    background-color: white;
+    border-radius:0.5rem;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 0.2);
+    max-width: 20rem;
+    min-height: 10rem;
+    padding: 0.5rem 1rem;
+}
+.grid-one{
+    border-top: .5rem solid var(--clr-primary-cyan);
+    grid-column: span 1;
+    grid-row: 2 / 4;
+}
+.grid-two{
+    border-top: .5rem solid var(--clr-primary-red);
+    grid-column: 2 / span 1;
+    grid-row: 1 / 3;
+}
+.grid-three{
+    border-top: .5rem solid var(--clr-primary-orange);
+    grid-column: 2 / span 1;
+    grid-row: 3 / 5;
+}
+.grid-four{
+    border-top: .5rem solid var(--clr-primary-blue);
+    grid-column: 3 / span 1;
+    grid-row: 2 / 4;
+}
+@media (max-width:1440px){
+    main{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .grid-one,.grid-two,.grid-three,.grid-four{
+        margin-inline:auto;
+    }
+}   
